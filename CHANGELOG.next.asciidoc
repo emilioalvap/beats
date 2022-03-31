@@ -61,6 +61,9 @@ https://github.com/elastic/beats/compare/v7.0.0-alpha2...main[Check the HEAD dif
 - Allow fixing data duplication on restart when filestream inputs did not have an ID set. Setting an ID for filestream
   inputs will fix the problem without generating any data duplication{issue}30061[30061]
 
+- Recover CEF extensions from messages with invalid/incomplete headers. {issue}30757[30757] {pull}30938[30938]
+- Fix panic in filestream input when `copy_truncate` log rotation strategy is used {issue}29024[29024] {pull}31041[31041]
+
 *Heartbeat*
 
 *Metricbeat*
@@ -79,6 +82,8 @@ https://github.com/elastic/beats/compare/v7.0.0-alpha2...main[Check the HEAD dif
 - packetbeat: Fix timeout error in af_packet capture mode. {issue}30731[30731] {issue}30822[30822] {pull}30882[30882]
 
 *Winlogbeat*
+
+- Fix evtx parsing failures. {issue}30621[30621] {pull}30942[30942]
 
 
 *Functionbeat*
@@ -113,6 +118,8 @@ https://github.com/elastic/beats/compare/v7.0.0-alpha2...main[Check the HEAD dif
 - Add support in httpjson input for oAuth2ProviderDefault of password grant_type. {pull}29087[29087]
 - Add extraction of `related.hosts` to Microsoft 365 Defender ingest pipeline {issue}29859[29859] {pull}29863[29863]
 - threatintel module: Add new Recorded Future integration. {pull}30030[30030]
+- Improve recovery from corrupted registries. {issue}25135[25135] {pull}30994[30994]
+- Add support in httpjson input for chain calls. {pull}29816[29816]
 
 *Auditbeat*
 
@@ -135,6 +142,9 @@ https://github.com/elastic/beats/compare/v7.0.0-alpha2...main[Check the HEAD dif
 - Extend documentation about `kubernetes.node.network.*` fields {pull}30826[30826]
 - Add `kubernetes.volume.fs.inodes.pct` field. {pull}30785[30785]
 - Improve Kubernetes dashboard. {pull}30913[30913]
+- Populate new container ECS fields in Docker module. {pull}30399[30399]
+- Populate new container ECS fields in Kubernetes module. {pull}30181[30181]
+- Populate ecs container fields in Containerd module. {pull}31025[31025]
 
 *Packetbeat*
 
@@ -145,6 +155,7 @@ https://github.com/elastic/beats/compare/v7.0.0-alpha2...main[Check the HEAD dif
 *Winlogbeat*
 
 - Improve the error message when the registry file content is invalid. {pull}30543[30543]
+- Retry EvtSubscribe from start if fails with strict mode. {issue}29793[29793] {pull}30155[30155]
 
 
 *Elastic Log Driver*

@@ -8,6 +8,7 @@
 # https://www.elastic.co/guide/en/beats/heartbeat/index.html
 
 ############################# Heartbeat ######################################
+############################# Heartbeat ######################################
 
 
 # Define a directory to load monitor definitions from. Definitions take the form
